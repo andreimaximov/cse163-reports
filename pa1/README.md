@@ -83,7 +83,8 @@ Binaries for macOS and Linux can be found in the [bin directory](bin).
 |![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/flower.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/quantize_1.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/quantize_2.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/quantize_4.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/quantize_6.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/quantize_8.bmp)|
 
 The standard quantization method described in the assignment was used for this
-filter.
+filter. Since RGBA channels are floating point in the [0, 1] range extra care
+had to be taken during rounding.
 
 ### Random Dither
 
@@ -93,6 +94,11 @@ binary)
 | Original | 1 | 2 | 4 | 6 | 8 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/flower.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/random_dither_1.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/random_dither_2.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/random_dither_4.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/random_dither_6.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/random_dither_8.bmp)|
+
+Since we store RGBA channels are in the [0, 1] floating point range, we first
+convert the RGBA channel to the [0, 255] range (8-bit) and then apply random
+noise in the [-0.5, 0.5] range as suggested. Of course we convert back to the
+[0, 1] range after quantizing.
 
 ### Floyd Steinberg Dither
 
@@ -118,7 +124,7 @@ similar to that of the source image.
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/flower.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/blur_3.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/blur_5.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/blur_7.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/blur_11.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/blur_13.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/blur_19.bmp)|
 
-**Note:** Both the Gaussian blur filter was normalized to add up to 1.0 for
+**Note:** The Gaussian blur filter was normalized to add up to 1.0 for
 in-bounds pixels to ensure consistent brightness at the edges.
 
 ### Sharpen
@@ -129,8 +135,10 @@ in-bounds pixels to ensure consistent brightness at the edges.
 |:---:|:---:|
 |![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/flower.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/sharpen.bmp)|
 
-**Note:** Both the sharpen filter was normalized to add up to 1.0 for in-bounds
-pixels to ensure consistent brightness at the edges.
+The sharpen filter was normalized to add up to 1.0 for in-bounds pixels to
+ensure consistent brightness at the edges. You may not see a difference in
+the thumbnail for these images so viewing the full-res images for comparison
+is recommended.
 
 ### Edge Detect
 
@@ -157,6 +165,13 @@ but **not** normalized because the weighted sum of each filter is 0.
 | Hat (sampling = 2) |![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/checkerboard.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/scale-128-128-hat.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/scale-200-400-hat.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/scale-900-600-hat.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/scale-768-768-hat.bmp)|
 | Mitchell (sampling = 3) |![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/checkerboard.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/scale-128-128-mitchell.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/scale-200-400-mitchell.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/scale-900-600-mitchell.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/scale-768-768-mitchell.bmp)|
 
+Scale was applied in two separate steps - first to the x-axis and then the
+y-axis. By transposing the image between after both operations we were able
+to re-use our code for a single dimension and apply it to both. As we can see,
+nearest neighbor performs very poorly when downscaling as the different
+squares in the grid appear to be of different size. The hat and Mitchell filter
+are much better at preserving overall appearance at the cost of bluriness.
+
 ### Shift
 
 **CLI:** `./image -shift sx sy sampling`
@@ -167,6 +182,12 @@ but **not** normalized because the weighted sum of each filter is 0.
 | Hat (sampling = 2) |![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/checkerboard.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/shift--40--40-hat.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/shift--20.3--20.7-hat.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/shift-40-40-hat.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/shift-20.3-20.7-hat.bmp)|
 | Mitchell (sampling = 3) |![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/checkerboard.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/shift--40--40-mitchell.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/shift--20.3--20.7-mitchell.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/shift-40-40-mitchell.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/shift-20.3-20.7-mitchell.bmp)|
 
+Like scale, shift was applied in two separate steps - first to the x-axis and
+then the y-axis. By transposing the image between after both operations we
+were able to re-use our code for a single dimension and apply it to both. As
+with scaling, we can see that nearest neighbor performs poorly and leads to
+inconsistent sizing of squares in the grid.
+
 ## 3.6 Fun
 
 **CLI:** `./image -ripple depth frequency`
@@ -175,17 +196,32 @@ but **not** normalized because the weighted sum of each filter is 0.
 |:---:|:---:|:---:|:---:|:---:|
 |![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/flower.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/ripple-25-8.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/ripple-50-16.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/ripple-75-32.bmp)|![](https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa1/ripple-100-64.bmp)|
 
-I implemented a water ripple effect for my custom filter. The idea behind the
-filter is to simulate a cosine wave propagating from the center of the image.
+I implemented a water ripple effect for my custom filter. The filter uses a
+camera centered directly above the image using orthographic projection of rays.
+Essentially camera rays are orthonormal to the image plane.
 
-Camera rays are projected perpendicularly into the image and refracted using
-the normal of the cosine wave at that pixel. The refracted ray then travels
-through the water to the underyling image. The distance the refracted ray
-travels depends on the depth of the wave and the point of the wave that it hit.
-Because of this, larger depth leads to more distortion in the x and y
-directions. Once the refracted ray reaches the underlying image it simply
-samples the nearest pixel.
+The idea behind the filter is to simulate a cosine wave propagating from the
+center of the image. To do this we create a `width` x `height` matrix of
+wave normal vectors at each pixel in the image. To do this we calculate the
+tangent `T` of the wave at each point taking the derivative of the wave height
+`dcos(x)/dx = -sin(x)`. Similar to how we create a coordinate frame from three
+`(u, v, w)` vectors, we find the normal `N = cross(T, cross(T, R))` where `R`
+is the ray vector which is orthonormal to the image plane.
 
-Adjusting the frequency changes the density of the ripples in the image. Higher
-frequencies result in more closely packed ripples.
+After projecting the ray into a particular pixel in the image, we refract the
+ray using [glm::refract](https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/refract.xhtml).
+The index of refraction for water is `~1.33` so the ratio of refraction between
+air and water is `1/1.33 = 0.75`.
 
+Call the refracted ray `R' = glm::refract(R, N, 0.75)`. Besides the normal `N`
+of the wave at a pixel we have the height `H` of the wave. Using this we can
+calculate the `x` and `y` offset the refracted wave experiences before reaching
+the underlying image. Thus, the output pixel `(x, y)` maps to source pixel
+`(x', y') = (x + R'.x * H/R'.z, y + R'.y * H/R'.z)`. `x'` and `y'` may be
+floating point so for simplicity we sample the nearest descrete pixel.
+
+The `filters::ripple(...)` function has an adjustable frequency parameter that
+changes the density of the ripples in the image with higher frequencies
+resulting in more closely packed ripples. There is also a depth parameter that
+adjusts the base height of the wave with larger depths resulting in more
+distortion as refracted rays have further to travel.
