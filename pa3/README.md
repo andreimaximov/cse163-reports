@@ -55,6 +55,15 @@ The following are several key features of my path tracer.
 
 - **Multi-Threaded** - Path tracing is [embarrassingly parallel](https://en.wikipedia.org/wiki/Embarrassingly_parallel) so of course multi-threading is supported. Different parts of the image however may have different loads due to varying geometry density. For example querying the BVH for the nearest intersection of a sky pixel in the Rungholt scene is many times faster than a pixel in the middle of the castle. To address this dynamic scheduling via a work queue is used to assign threads partitions to work on.
 
+## Renders
+
+The following are several [Cornell Box](https://en.wikipedia.org/wiki/Cornell_box) renders using modified materials from the [Williams graphics dataset ](http://graphics.cs.williams.edu/data/meshes.xml)  to demonstrate several different material types.
+
+
+| Glossy - 300 Samples |
+|:--------------------:|
+|![](images/cornell-glossy.png)|
+
 ## Resources
 
 The following is a list of resources I used to learn about path tracing and Monte Carlo sampling.
