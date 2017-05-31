@@ -27,19 +27,19 @@ OPTIONS:
   arguments to be treated as positional options
 ```
 
-The config file is expected to be in JSON format with the same fields as `config.hpp` in the source code. This included information such as camera position, sampling depth, debugging, multi-threading, etc.
+The config file is expected to be in JSON format with the same fields as `config.hpp` in the source code. Examples are available in the [config](config) directory.
 
 ## Binaries
 
-The macOS binary can be found in the [bin directory](bin).
+The macOS binary can be found in the [bin](bin) directory.
 
 ## Introduction
 
-I enjoyed learning about and implementing ray tracing in CSE 167 so for my final CSE 163 project I decided to extend it by writing a path tracer with support for Monte Carlo global illumination, fresnel refractions, glossy surfaces, and caustics.
+I enjoyed learning about and implementing ray tracing in CSE 167 so for my final CSE 163 project I decided to writie a path tracer with support for Monte Carlo global illumination, fresnel refractions, glossy surfaces, and caustics.
 
-To ease the burden of creating scenes, I used the [tinyobjloader](https://github.com/syoyo/tinyobjloader) loader to load OBJ geometry and MTL material files available [here](http://graphics.cs.williams.edu/data/meshes.xml).
+To not worry about creating scenes, I used the [tinyobjloader](https://github.com/syoyo/tinyobjloader) library to load OBJ scenes and MTL materials available [here](http://graphics.cs.williams.edu/data/meshes.xml).
 
-The output file is updated once a second so you can observe the render clean up with time as more and more samples are factored in.
+The output file is updated once a second so you can observe the render clean up with time as more samples are factored in.
 
 ## Features
 
