@@ -14,17 +14,17 @@
 ```
 ./pathtracer {OPTIONS} [scene] [materials] [config] [output]
 
-raytracer
+  pathtracer
 
 OPTIONS:
 
-  -h, --help                        display this help menu
-  scene                             the scene file
-  materials                         the materials directory
-  config                            the config file
-  output                            the output file
-  "--" can be used to terminate flag options and force all following
-  arguments to be treated as positional options
+    -h, --help                        display this help menu
+    scene                             the scene file
+    materials                         the materials directory
+    config                            the config file
+    output                            the output file
+    "--" can be used to terminate flag options and force all following
+    arguments to be treated as positional options
 ```
 
 The config file is expected to be in JSON format with the same fields as `config.hpp` in the source code. Examples are available in the [config](config) directory.
