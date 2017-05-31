@@ -1,0 +1,16 @@
+{
+  "width":      256,
+  "height":     256,
+  "center":     [0, 0, 0],
+  "position":   [-1.25, 1, -1.75],
+  "up":         [0, 1, 0],
+  "fovy":       37.5,
+  "threads":    4,
+  "partitions": 1024,
+  "bounces":    4,
+  "samples":    100,
+  "epsilon":    0.001,
+  "background": [0, 0, 0],
+  "normals"   : false,
+  "diffuse"   : false
+}
