@@ -27,7 +27,7 @@ OPTIONS:
     arguments to be treated as positional options
 ```
 
-The config file is expected to be in JSON format with the same fields as `config.hpp` in the source code. Examples are available in the [config](config) directory.
+The config file is expected to be in JSON format with the same fields as `config.hpp` in the source code. Examples are available in the [config](config) directory. By default the pathtracer will write to a `render.png` file in your current working directory.
 
 ## Binaries
 
@@ -57,7 +57,7 @@ The following are several key features of my path tracer.
 
 ## Renders
 
-The following are several [Cornell Box](https://en.wikipedia.org/wiki/Cornell_box) renders using modified materials from the [Williams graphics dataset ](http://graphics.cs.williams.edu/data/meshes.xml) to demonstrate several different material types. The modified configuration, geometry, and material files are available in the [config](config) and [scenes](scenes) directories. Several convenience scripts demonstrating the CLI usage are available in the [scripts](scripts) directory
+The following are several [Cornell Box](https://en.wikipedia.org/wiki/Cornell_box) renders using modified materials from the [Williams graphics dataset](http://graphics.cs.williams.edu/data/meshes.xml) to demonstrate several different material types. The modified configuration, geometry, and material files are available in the [config](config) and [scenes](scenes) directories. Several convenience scripts demonstrating the CLI usage are available in the [scripts](scripts) directory
 
 
 | Original - 1500 Samples | Glossy - 300 Samples | Glass - 1000 Samples | Spheres - 3000 Samples | Water - 1000 Samples |
