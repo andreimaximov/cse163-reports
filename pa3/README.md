@@ -66,7 +66,7 @@ The following are several [Cornell Box](https://en.wikipedia.org/wiki/Cornell_bo
 
 Here are several more renderings of scenes from the [Williams graphics dataset ](http://graphics.cs.williams.edu/data/meshes.xml) website. These use unmodified original geometry and materials that can be downloaded from the provided link but config files with camera positions and environment lighting presets are available in the [config](config) directory.
 
-| Lost Empire - 250 Samples | Rungholt - 64 Samples |
+| Lost Empire - 250 Samples | Rungholt - 32 Samples |
 |:--------------------:|:--------------------:|
 |![](images/lost-empire.png)|![](images/rungholt.png)|
 
