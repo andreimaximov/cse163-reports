@@ -4,7 +4,7 @@ SCRIPTDIR=$(cd $(dirname ${0}) && pwd -P)
 
 source ${SCRIPTDIR}/env.sh
 
-OBJ="${SCENES}/CornellBox-Dragon.obj"
+OBJ="${CACHE}/CornellBox-Dragon.obj"
 URL="https://s3.amazonaws.com/andrei-maximov-public/ucsd/cse163/pa3/scenes/CornellBox-Dragon.obj"
 
 if [ ! -f ${OBJ} ]; then

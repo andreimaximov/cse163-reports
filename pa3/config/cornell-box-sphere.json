@@ -12,5 +12,7 @@
   "epsilon":    0.001,
   "background": [0.0, 0.0, 0.0],
   "normals"   : false,
-  "diffuse"   : false
+  "diffuse"   : false,
+  "use_textures": false,
+  "use_normals" : true
 }
