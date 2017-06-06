@@ -45,13 +45,15 @@ The output file is updated once a second so you can observe the render clean up 
 
 The following are several key features of my path tracer.
 
-- **Importance sampling** - The [cosine weighted hemisphere](http://www.rorydriscoll.com/2009/01/07/better-sampling/) is used for sampling diffuse surface and a "concentrated" version with clustering towards the top is used for importance sampling rough/glossy reflections.
+- **Monte Carlo Importance Sampling** - The [cosine weighted hemisphere](http://www.rorydriscoll.com/2009/01/07/better-sampling/) is used for sampling diffuse surface and a "concentrated" version with clustering towards the top is used for importance sampling rough/glossy reflections. This increases the rate of convergence while maintaining realistic effects like soft shadows and indirect illumination.
+
+- **Fresnel Reflection/Refraction** - Realistic glass and water materials with fresnel based reflection/refraction light splitting is supported. In each iteration we make a probabilistic choice to sample the reflection or refraction of a material based on the fresnel factor.
 
 - **Russian Roulette Path Termination** - To avoid the bias of having a finite recursion depth I used Russian Roulette to randomize my path termination and scale non-terminated paths by the inverse probability of the ray not being terminated. The probability is adaptively scaled based on the intensity of the material the ray has intersected with. Since rays bouncing off dark materials will contribute less to the overall cover of the scene we can perform shallower sampling - the opposite holds for materials with high intensities.
 
-- **Direct Light Sampling** - To greatly speedup convergence objects emissive objects are stored in an additional list of lights. When estimating the color of a diffuse surface we (1) uniformly sample a random light and divide by `PDF = 1 / (# of lights)` and (2) importance sample the BRDF. One thing to be careful of is to not double count lights by ignoring them in the indirect lighting sample. This results in much faster convergence for scenes with lots of diffuse surfaces.
+- **Direct Light Sampling** - To greatly speedup convergence emissive objects are stored in a list of lights. When estimating the color of a diffuse surface we (1) uniformly sample a random light and divide by `PDF = 1 / (# of lights)` and (2) importance sample the BRDF. One thing to be careful of is to not double count lights by ignoring them in the indirect lighting sample. This results in much faster convergence for scenes with lots of diffuse surfaces.
 
-- **Texture Mapping** - Diffuse textures will be loaded from the materials directory if specified in the associated MTL file. Texturing can be disabled via the `use_textures` option in the scene config.
+- **Texture Mapping** - Diffuse textures will be loaded from the materials directory if specified in the associated MTL file. Texturing can be disabled via the `use_textures` option in the scene config. Note that having many transparent textures can decrease performance as the ray depth is not incremented when it passes through a transparent pixel in a texture which can lead to needing more logical bounces for each physical bounce.
 
 - **Bounding Volume Hierarchy** - Some scenes such as Rungholt from the [Williams graphics dataset ](http://graphics.cs.williams.edu/data/meshes.xml) have an extremely high vertex count (several million). I used a BVH to optimize ray intersection tests to ~O(log N). This was largely borrowed from my CSE 167 assignment but I made several optimizations to it such as handling the case of bad splits that can result from large overlap along the midpoint of the dimension with highest variance which is used as the main splitting heuristic.
 
@@ -74,9 +76,9 @@ The following Cornell Boxes demonstrate the caustic effect with glass and water 
 
 Lastly here are several more renderings of scenes from the [Williams graphics dataset ](http://graphics.cs.williams.edu/data/meshes.xml) website showing simple environment lighting and texture mapping. These use unmodified original geometry and materials that can be downloaded from the provided links but config files with camera positions and environment lighting presets are available in the [config](config) directory.
 
-| Lost Empire - 4 Samples (With Textures) | Lost Empire - 250 Samples (No Textures) | Rungholt - 32 Samples  |
-|:---------------------------------------:|:---------------------------------------:|:----------------------:|
-|![](images/lost-empire-with-textures.png)| ![](images/lost-empire-no-textures.png) |![](images/rungholt.png)|
+| Lost Empire - 32 Samples (With Textures) | Lost Empire - 250 Samples (No Textures) | Rungholt - 32 Samples  |
+|:----------------------------------------:|:---------------------------------------:|:----------------------:|
+|![](images/lost-empire-with-textures.png) | ![](images/lost-empire-no-textures.png) |![](images/rungholt.png)|
 
 **Note:** These images were rendered until they were "good enough" - sometimes much longer than necessary as I left the pathtracer running on a Digital Ocean instance.
 
