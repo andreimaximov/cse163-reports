@@ -76,7 +76,7 @@ Here are several more renderings of scenes from the [Williams graphics dataset ]
 |:--------------------:|:--------------------:|
 |![](images/lost-empire.png)|![](images/rungholt.png)|
 
-**Note:** These images were rendered until they were "good enough" - often much longer than necessary as I left the path tracer running on a Digital Ocean instance.
+**Note:** These images were rendered until they were "good enough" - sometimes much longer than necessary as I left the path tracer running on a Digital Ocean instance.
 
 ## Resources
 
