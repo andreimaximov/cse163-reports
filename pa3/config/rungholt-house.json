@@ -11,8 +11,8 @@
   "samples":    10000,
   "epsilon":    0.0001,
   "background": [0.7, 0.75, 0.8],
-  "normals"   : false,
-  "diffuse"   : false,
+  "normals":    false,
+  "diffuse":    false,
   "use_textures": true,
   "use_normals" : false
 }
