@@ -31,7 +31,7 @@ The config file is expected to be in JSON format with the same fields as `config
 
 ## Binaries
 
-The macOS binary can be found in the [bin](bin) directory.
+Binaries for macOS and Linux can be found in the [bin](bin) directory.
 
 ## Introduction
 
