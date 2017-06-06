@@ -9,7 +9,7 @@ ZIP="rungholt.zip"
 URL="http://graphics.cs.williams.edu/data/meshes/rungholt.zip"
 CWD=$(pwd)
 
-if [ ! -d ${DIR} ]; then
+if [[ ! -d ${DIR} ]]; then
     echo "Downloading scene..."
     mkdir -p ${DIR}
     cd ${DIR}

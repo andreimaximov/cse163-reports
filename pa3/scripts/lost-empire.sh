@@ -9,7 +9,7 @@ ZIP="lost-empire.zip"
 URL="http://graphics.cs.williams.edu/data/meshes/lost-empire.zip"
 CWD=$(pwd)
 
-if [ ! -d ${DIR} ]; then
+if [[ ! -d ${DIR} ]]; then
     echo "Downloading scene..."
     mkdir -p ${DIR}
     cd ${DIR}
