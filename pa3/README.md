@@ -60,9 +60,15 @@ The following are several key features of my path tracer.
 The following are several [Cornell Box](https://en.wikipedia.org/wiki/Cornell_box) renders using modified materials from the [Williams graphics dataset](http://graphics.cs.williams.edu/data/meshes.xml) to demonstrate several different material types. The configuration, geometry, and material files are available in the [config](config) and [scenes](scenes) directories. Several convenience scripts demonstrating the CLI usage are available in the [scripts](scripts) directory. The dragon scene is a fairly large file hosted on AWS that is automatically downloaded by the [dragon.sh](scripts/dragon.sh) script.
 
 
-| Original - 1500 Samples | Glossy - 300 Samples | Glass - 1000 Samples | Dragon - 64 Samples | Spheres - 3000 Samples | Water - 1000 Samples |
-|:--------------------:|:--------------------:|:--------------------:|:-------------------:|:--------------------:|:--------------------:|
-|![](images/cornell-original.png)|![](images/cornell-glossy.png)|![](images/cornell-glass.png)|![](images/cornell-dragon.png)|![](images/cornell-spheres.png)|![](images/cornell-water.png)|
+| Original - 1500 Samples | Glossy - 300 Samples | Glass - 1000 Samples | Dragon - 64 Samples |
+|:-----------------------:|:--------------------:|:--------------------:|:-------------------:|
+|![](images/cornell-original.png)|![](images/cornell-glossy.png)|![](images/cornell-glass.png)|![](images/cornell-dragon.png)|
+
+The following images show the caustic effect below the glass sphere and water.
+
+| Spheres - 3000 Samples | Water - 1000 Samples |
+|:----------------------:|:--------------------:|
+|![](images/cornell-spheres.png)|![](images/cornell-water.png)|
 
 Here are several more renderings of scenes from the [Williams graphics dataset ](http://graphics.cs.williams.edu/data/meshes.xml) website. These use unmodified original geometry and materials that can be downloaded from the provided link but config files with camera positions and environment lighting presets are available in the [config](config) directory.
 
