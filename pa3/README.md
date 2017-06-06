@@ -60,7 +60,7 @@ The following are several key features of my path tracer.
 The following are several [Cornell Box](https://en.wikipedia.org/wiki/Cornell_box) renders using modified materials from the [Williams graphics dataset](http://graphics.cs.williams.edu/data/meshes.xml) to demonstrate several different material types. The configuration, geometry, and material files are available in the [config](config) and [scenes](scenes) directories. Several convenience scripts demonstrating the CLI usage are available in the [scripts](scripts) directory. The dragon scene is a fairly large file hosted on AWS that is automatically downloaded by the [dragon.sh](scripts/dragon.sh) script.
 
 
-| Original - 1500 Samples | Glossy - 300 Samples | Glass - 1000 Samples | Dragon - 64 Samples |
+| Original - 1500 Samples | Glossy - 300 Samples | Glass - 1000 Samples | Dragon - 128 Samples |
 |:-----------------------:|:--------------------:|:--------------------:|:-------------------:|
 |![](images/cornell-original.png)|![](images/cornell-glossy.png)|![](images/cornell-glass.png)|![](images/cornell-dragon.png)|
 
