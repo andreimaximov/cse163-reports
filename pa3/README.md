@@ -76,11 +76,11 @@ The following Cornell Boxes demonstrate the caustic effect with glass and water 
 
 Lastly here are several more renderings of scenes from the [Williams graphics dataset ](http://graphics.cs.williams.edu/data/meshes.xml) website showing simple environment lighting and texture mapping. These use unmodified original geometry and materials that can be downloaded from the provided links but config files with camera positions and environment lighting presets are available in the [config](config) directory.
 
-| Lost Empire - 32 Samples (With Textures) | Lost Empire - 250 Samples (No Textures) | Rungholt - 32 Samples  |
-|:----------------------------------------:|:---------------------------------------:|:----------------------:|
-|![](images/lost-empire-with-textures.png) | ![](images/lost-empire-no-textures.png) |![](images/rungholt.png)|
+| Lost Empire - 32 Samples (With Textures) | Lost Empire - 250 Samples (No Textures) | Rungholt - 10 Samples (With Textures) | Rungholt - 32 Samples (No Textures) |
+|:----------------------------------------:|:---------------------------------------:|:-------------------------------------:|:-----------------------------------:|
+|![](images/lost-empire-with-textures.png) | ![](images/lost-empire-no-textures.png) |![](images/rungholt-with-textures.png)|![](images/rungholt-no-textures.png)|
 
-**Note:** These images were rendered until they were "good enough" - sometimes much longer than necessary as I left the pathtracer running on a Digital Ocean instance.
+**Note:** These images were rendered until they were "good enough" - sometimes much longer than necessary as I left the pathtracer running on a Digital Ocean instance. The environment lighting for the two Rungholt scenes is also different as I didn't want to render the the no-texture version again.
 
 ## Resources
 
