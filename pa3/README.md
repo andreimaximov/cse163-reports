@@ -39,15 +39,15 @@ I enjoyed learning about and implementing ray tracing in CSE 167 so for my final
 
 To not worry about creating scenes, I used the [tinyobjloader](https://github.com/syoyo/tinyobjloader) library to load OBJ scenes and MTL materials available [here](http://graphics.cs.williams.edu/data/meshes.xml).
 
-The output file is updated once a second so you can observe the render clean up with time as more samples are factored in.
+The `render.png` outtput file is updated once a second so you can observe the render clean up with more samples.
 
 ## Features
 
 The following are several key features of my path tracer.
 
-- **Monte Carlo Importance Sampling** - The [cosine weighted hemisphere](http://www.rorydriscoll.com/2009/01/07/better-sampling/) is used for sampling diffuse surface and a "concentrated" version with clustering towards the top is used for importance sampling rough/glossy reflections. This increases the rate of convergence while maintaining realistic effects like soft shadows and indirect illumination.
+- **Monte Carlo Importance Sampling** - The [cosine weighted hemisphere](http://www.rorydriscoll.com/2009/01/07/better-sampling/) is used for sampling diffuse BRDF's and a "concentrated" version with clustering towards the top is used for importance sampling rough/glossy reflection BRDF's. This increases the rate of convergence while maintaining realistic effects like soft shadows and indirect illumination.
 
-- **Fresnel Reflection/Refraction** - Realistic glass and water materials with fresnel based reflection/refraction light splitting is supported. In each iteration we make a probabilistic choice to sample the reflection or refraction of a material based on the fresnel factor.
+- **Fresnel Reflection/Refraction** - Realistic glass and water materials with fresnel based reflection/refraction light splitting is supported. In each iteration we make a probabilistic choice to sample the reflection BRDF or refraction BTDF of a material based on the fresnel factor.
 
 - **Russian Roulette Path Termination** - To avoid the bias of having a finite recursion depth I used Russian Roulette to randomize my path termination and scale non-terminated paths by the inverse probability of the ray not being terminated. The probability is adaptively scaled based on the intensity of the material the ray has intersected with. Since rays bouncing off dark materials will contribute less to the overall cover of the scene we can perform shallower sampling - the opposite holds for materials with high intensities.
 
