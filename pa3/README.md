@@ -39,7 +39,7 @@ I enjoyed learning about and implementing ray tracing in CSE 167 so for my final
 
 To not worry about creating scenes, I used the [tinyobjloader](https://github.com/syoyo/tinyobjloader) library to load OBJ scenes and MTL materials available [here](http://graphics.cs.williams.edu/data/meshes.xml).
 
-The `render.png` outtput file is updated once a second so you can observe the render clean up with more samples.
+The `render.png` output file is updated once a second so you can observe the render clean up with more samples.
 
 ## Features
 
