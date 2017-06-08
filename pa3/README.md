@@ -61,7 +61,7 @@ The following are several key features of my path tracer.
 
 ## Renders
 
-The following are several [Cornell Box](https://en.wikipedia.org/wiki/Cornell_box) renders using modified materials from the [Williams graphics dataset](http://graphics.cs.williams.edu/data/meshes.xml) to demonstrate several different material types. The configuration, geometry, and material files are available in the [config](config) and [scenes](scenes) directories. Several convenience scripts demonstrating the CLI usage are available in the [scripts](scripts) directory. The Dragon, Lost Empire, and Rungholt scenes are large files that are automatically downloaded to the `.cache` directory by the run script.
+The following are several [Cornell Box](https://en.wikipedia.org/wiki/Cornell_box) renders using modified materials from the [Williams graphics dataset](http://graphics.cs.williams.edu/data/meshes.xml) to demonstrate several different material types. The configuration, geometry, and material files are available in the [config](config) and [scenes](scenes) directories. Several convenience scripts demonstrating the CLI usage are available in the [scripts](scripts) directory. The Dragon, Lost Empire, and Rungholt scenes are large files that are automatically downloaded to the `.cache` directory by the run script. If you encounter errors with the scripts you may need to clear the `.cache` directory after fixing your issue but before running the script again.
 
 
 | Original - 1500 Samples | Glossy - 300 Samples | Glass - 1000 Samples | Dragon - 32 Samples |
