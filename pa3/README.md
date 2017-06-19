@@ -31,11 +31,11 @@ The config file is expected to be in JSON format with the same fields as `config
 
 ## Binaries
 
-Binaries for macOS and Linux can be found in the [bin](bin) directory.
+Binaries for macOS and Linux can be found in the [bin](bin) directory. The source code is available [here](https://github.com/andreimaximov/pathtracer).
 
 ## Introduction
 
-I enjoyed learning about and implementing ray tracing in CSE 167 so for my final CSE 163 project I decided to writie a path tracer with support for Monte Carlo global illumination, fresnel refractions, glossy surfaces, and caustics.
+I enjoyed learning about and implementing ray tracing in CSE 167 so for my final CSE 163 project I decided to write a path tracer with support for Monte Carlo global illumination, fresnel refractions, glossy surfaces, and caustics.
 
 To not worry about creating scenes, I used the [tinyobjloader](https://github.com/syoyo/tinyobjloader) library to load OBJ scenes and MTL materials available [here](http://graphics.cs.williams.edu/data/meshes.xml).
 
