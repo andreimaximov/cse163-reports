@@ -38,7 +38,7 @@ Binaries for macOS and Linux can be found in the [bin directory](bin).
 
 | Original | 0.0 | 0.5 | 1.0 | 1.5 | 2.0 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|![](${s3}/flower.bmp)|![](${s3}/brightness_0.0.bmp)|![](${s3}/brightness_0.5.bmp)|![](${s3}/brightness_1.0.bmp)|![](${s3}/brightness_1.5.bmp)|![](${s3}/brightness_2.0.bmp)|
+|![](${host}/flower.bmp)|![](${host}/brightness_0.0.bmp)|![](${host}/brightness_0.5.bmp)|![](${host}/brightness_1.0.bmp)|![](${host}/brightness_1.5.bmp)|![](${host}/brightness_2.0.bmp)|
 
 ### Contrast
 
@@ -46,7 +46,7 @@ Binaries for macOS and Linux can be found in the [bin directory](bin).
 
 | Original | -0.5 | 0.0 | 0.5 | 1.0 | 1.7 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|![](${s3}/flower.bmp)|![](${s3}/contrast_-0.5.bmp)|![](${s3}/contrast_0.0.bmp)|![](${s3}/contrast_0.5.bmp)|![](${s3}/contrast_1.0.bmp)|![](${s3}/contrast_1.7.bmp)|
+|![](${host}/flower.bmp)|![](${host}/contrast_-0.5.bmp)|![](${host}/contrast_0.0.bmp)|![](${host}/contrast_0.5.bmp)|![](${host}/contrast_1.0.bmp)|![](${host}/contrast_1.7.bmp)|
 
 ### Saturation
 
@@ -54,7 +54,7 @@ Binaries for macOS and Linux can be found in the [bin directory](bin).
 
 | Original | -1.0 | 0.0 | 0.5 | 1.0 | 2.5 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|![](${s3}/flower.bmp)|![](${s3}/saturation_-1.0.bmp)|![](${s3}/saturation_0.0.bmp)|![](${s3}/saturation_0.5.bmp)|![](${s3}/saturation_1.0.bmp)|![](${s3}/saturation_2.5.bmp)|
+|![](${host}/flower.bmp)|![](${host}/saturation_-1.0.bmp)|![](${host}/saturation_0.0.bmp)|![](${host}/saturation_0.5.bmp)|![](${host}/saturation_1.0.bmp)|![](${host}/saturation_2.5.bmp)|
 
 ### Gamma
 
@@ -62,7 +62,7 @@ Binaries for macOS and Linux can be found in the [bin directory](bin).
 
 | Original | 0.0 | 0.5 | 1.0 | 1.5 | 2.0 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|![](${s3}/flower.bmp)|![](${s3}/gamma_0.0.bmp)|![](${s3}/gamma_0.5.bmp)|![](${s3}/gamma_1.0.bmp)|![](${s3}/gamma_1.5.bmp)|![](${s3}/gamma_2.0.bmp)|
+|![](${host}/flower.bmp)|![](${host}/gamma_0.0.bmp)|![](${host}/gamma_0.5.bmp)|![](${host}/gamma_1.0.bmp)|![](${host}/gamma_1.5.bmp)|![](${host}/gamma_2.0.bmp)|
 
 ### Crop
 
@@ -70,7 +70,7 @@ Binaries for macOS and Linux can be found in the [bin directory](bin).
 
 | Original | (100, 100, 200, 200) |
 |:---:|:---:|
-|![](${s3}/flower.bmp)|![](${s3}/crop.bmp)|
+|![](${host}/flower.bmp)|![](${host}/crop.bmp)|
 
 ## 3.3 Quantization and Dithering
 
@@ -80,7 +80,7 @@ Binaries for macOS and Linux can be found in the [bin directory](bin).
 
 | Original | 1 | 2 | 4 | 6 | 8 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|![](${s3}/flower.bmp)|![](${s3}/quantize_1.bmp)|![](${s3}/quantize_2.bmp)|![](${s3}/quantize_4.bmp)|![](${s3}/quantize_6.bmp)|![](${s3}/quantize_8.bmp)|
+|![](${host}/flower.bmp)|![](${host}/quantize_1.bmp)|![](${host}/quantize_2.bmp)|![](${host}/quantize_4.bmp)|![](${host}/quantize_6.bmp)|![](${host}/quantize_8.bmp)|
 
 The standard quantization method described in the assignment was used for this
 filter. Since RGBA channels are floating point in the [0, 1] range extra care
@@ -93,7 +93,7 @@ binary)
 
 | Original | 1 | 2 | 4 | 6 | 8 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|![](${s3}/flower.bmp)|![](${s3}/random_dither_1.bmp)|![](${s3}/random_dither_2.bmp)|![](${s3}/random_dither_4.bmp)|![](${s3}/random_dither_6.bmp)|![](${s3}/random_dither_8.bmp)|
+|![](${host}/flower.bmp)|![](${host}/random_dither_1.bmp)|![](${host}/random_dither_2.bmp)|![](${host}/random_dither_4.bmp)|![](${host}/random_dither_6.bmp)|![](${host}/random_dither_8.bmp)|
 
 Since we store RGBA channels are in the [0, 1] floating point range, we first
 convert the RGBA channel to the [0, 255] range (8-bit) and then apply random
@@ -107,7 +107,7 @@ reference binary)
 
 | Original | 1 | 2 | 4 | 6 | 8 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|![](${s3}/flower.bmp)|![](${s3}/fsd_1.bmp)|![](${s3}/fsd_2.bmp)|![](${s3}/fsd_4.bmp)|![](${s3}/fsd_6.bmp)|![](${s3}/fsd_8.bmp)|
+|![](${host}/flower.bmp)|![](${host}/fsd_1.bmp)|![](${host}/fsd_2.bmp)|![](${host}/fsd_4.bmp)|![](${host}/fsd_6.bmp)|![](${host}/fsd_8.bmp)|
 
 The error propagation constants (alpha, beta, gamma, delta) are normalized to
 ensure that the multiplicative weight factor of the error propagating from each
@@ -122,7 +122,7 @@ similar to that of the source image.
 
 | Original | 3 | 5 | 7 | 11 | 13 | 17 |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|![](${s3}/flower.bmp)|![](${s3}/blur_3.bmp)|![](${s3}/blur_5.bmp)|![](${s3}/blur_7.bmp)|![](${s3}/blur_11.bmp)|![](${s3}/blur_13.bmp)|![](${s3}/blur_19.bmp)|
+|![](${host}/flower.bmp)|![](${host}/blur_3.bmp)|![](${host}/blur_5.bmp)|![](${host}/blur_7.bmp)|![](${host}/blur_11.bmp)|![](${host}/blur_13.bmp)|![](${host}/blur_19.bmp)|
 
 **Note:** The Gaussian blur filter was normalized to add up to 1.0 for
 in-bounds pixels to ensure consistent brightness at the edges.
@@ -133,7 +133,7 @@ in-bounds pixels to ensure consistent brightness at the edges.
 
 | Original | 3 x 3 |
 |:---:|:---:|
-|![](${s3}/flower.bmp)|![](${s3}/sharpen.bmp)|
+|![](${host}/flower.bmp)|![](${host}/sharpen.bmp)|
 
 The sharpen filter was normalized to add up to 1.0 for in-bounds pixels to
 ensure consistent brightness at the edges. You may not see a difference in
@@ -146,9 +146,9 @@ is recommended.
 
 | Original | 10 | 50 | 100 | 200 |
 |:---:|:---:|:---:|:---:|:---:|
-|![](${s3}/flower.bmp)|![](${s3}/edge_detect_flower_10.bmp)|![](${s3}/edge_detect_flower_50.bmp)|![](${s3}/edge_detect_flower_100.bmp)|![](${s3}/edge_detect_flower_200.bmp)|
-|![](${s3}/checkerboard.bmp)|![](${s3}/edge_detect_checker_10.bmp)|![](${s3}/edge_detect_checker_50.bmp)|![](${s3}/edge_detect_checker_100.bmp)|![](${s3}/edge_detect_checker_200.bmp)|
-|![](${s3}/wave.bmp)|![](${s3}/edge_detect_wave_10.bmp)|![](${s3}/edge_detect_wave_50.bmp)|![](${s3}/edge_detect_wave_100.bmp)|![](${s3}/edge_detect_wave_200.bmp)|
+|![](${host}/flower.bmp)|![](${host}/edge_detect_flower_10.bmp)|![](${host}/edge_detect_flower_50.bmp)|![](${host}/edge_detect_flower_100.bmp)|![](${host}/edge_detect_flower_200.bmp)|
+|![](${host}/checkerboard.bmp)|![](${host}/edge_detect_checker_10.bmp)|![](${host}/edge_detect_checker_50.bmp)|![](${host}/edge_detect_checker_100.bmp)|![](${host}/edge_detect_checker_200.bmp)|
+|![](${host}/wave.bmp)|![](${host}/edge_detect_wave_10.bmp)|![](${host}/edge_detect_wave_50.bmp)|![](${host}/edge_detect_wave_100.bmp)|![](${host}/edge_detect_wave_200.bmp)|
 
 **Note:** Standard Sobel edge detector filters were convolved over the image
 but **not** normalized because the weighted sum of each filter is 0.
@@ -161,9 +161,9 @@ but **not** normalized because the weighted sum of each filter is 0.
 
 | Sampling | Original | 128 x 128 | 200 x 400 | 900 x 600 | 768 x 768 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| Nearest Neighbor (sampling = 1) |![](${s3}/checkerboard.bmp)|![](${s3}/scale-128-128-nn.bmp)|![](${s3}/scale-200-400-nn.bmp)|![](${s3}/scale-900-600-nn.bmp)|![](${s3}/scale-768-768-nn.bmp)|
-| Hat (sampling = 2) |![](${s3}/checkerboard.bmp)|![](${s3}/scale-128-128-hat.bmp)|![](${s3}/scale-200-400-hat.bmp)|![](${s3}/scale-900-600-hat.bmp)|![](${s3}/scale-768-768-hat.bmp)|
-| Mitchell (sampling = 3) |![](${s3}/checkerboard.bmp)|![](${s3}/scale-128-128-mitchell.bmp)|![](${s3}/scale-200-400-mitchell.bmp)|![](${s3}/scale-900-600-mitchell.bmp)|![](${s3}/scale-768-768-mitchell.bmp)|
+| Nearest Neighbor (sampling = 1) |![](${host}/checkerboard.bmp)|![](${host}/scale-128-128-nn.bmp)|![](${host}/scale-200-400-nn.bmp)|![](${host}/scale-900-600-nn.bmp)|![](${host}/scale-768-768-nn.bmp)|
+| Hat (sampling = 2) |![](${host}/checkerboard.bmp)|![](${host}/scale-128-128-hat.bmp)|![](${host}/scale-200-400-hat.bmp)|![](${host}/scale-900-600-hat.bmp)|![](${host}/scale-768-768-hat.bmp)|
+| Mitchell (sampling = 3) |![](${host}/checkerboard.bmp)|![](${host}/scale-128-128-mitchell.bmp)|![](${host}/scale-200-400-mitchell.bmp)|![](${host}/scale-900-600-mitchell.bmp)|![](${host}/scale-768-768-mitchell.bmp)|
 
 Scale was applied in two separate steps - first to the x-axis and then the
 y-axis. By transposing the image between after both operations we were able
@@ -178,9 +178,9 @@ are much better at preserving overall appearance at the cost of bluriness.
 
 | Sampling | Original | (-40, -40) | (-20.3, -20.7) | (40, 40) | (20.3, 20.7) |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| Nearest Neighbor (sampling = 1) |![](${s3}/checkerboard.bmp)|![](${s3}/shift--40--40-nn.bmp)|![](${s3}/shift--20.3--20.7-nn.bmp)|![](${s3}/shift-40-40-nn.bmp)|![](${s3}/shift-20.3-20.7-nn.bmp)|
-| Hat (sampling = 2) |![](${s3}/checkerboard.bmp)|![](${s3}/shift--40--40-hat.bmp)|![](${s3}/shift--20.3--20.7-hat.bmp)|![](${s3}/shift-40-40-hat.bmp)|![](${s3}/shift-20.3-20.7-hat.bmp)|
-| Mitchell (sampling = 3) |![](${s3}/checkerboard.bmp)|![](${s3}/shift--40--40-mitchell.bmp)|![](${s3}/shift--20.3--20.7-mitchell.bmp)|![](${s3}/shift-40-40-mitchell.bmp)|![](${s3}/shift-20.3-20.7-mitchell.bmp)|
+| Nearest Neighbor (sampling = 1) |![](${host}/checkerboard.bmp)|![](${host}/shift--40--40-nn.bmp)|![](${host}/shift--20.3--20.7-nn.bmp)|![](${host}/shift-40-40-nn.bmp)|![](${host}/shift-20.3-20.7-nn.bmp)|
+| Hat (sampling = 2) |![](${host}/checkerboard.bmp)|![](${host}/shift--40--40-hat.bmp)|![](${host}/shift--20.3--20.7-hat.bmp)|![](${host}/shift-40-40-hat.bmp)|![](${host}/shift-20.3-20.7-hat.bmp)|
+| Mitchell (sampling = 3) |![](${host}/checkerboard.bmp)|![](${host}/shift--40--40-mitchell.bmp)|![](${host}/shift--20.3--20.7-mitchell.bmp)|![](${host}/shift-40-40-mitchell.bmp)|![](${host}/shift-20.3-20.7-mitchell.bmp)|
 
 Like scale, shift was applied in two separate steps - first to the x-axis and
 then the y-axis. By transposing the image between after both operations we
@@ -194,7 +194,7 @@ inconsistent sizing of squares in the grid.
 
 | Original | (25, 8) | (50, 16) | (75, 32) | (100, 64) |
 |:---:|:---:|:---:|:---:|:---:|
-|![](${s3}/flower.bmp)|![](${s3}/ripple-25-8.bmp)|![](${s3}/ripple-50-16.bmp)|![](${s3}/ripple-75-32.bmp)|![](${s3}/ripple-100-64.bmp)|
+|![](${host}/flower.bmp)|![](${host}/ripple-25-8.bmp)|![](${host}/ripple-50-16.bmp)|![](${host}/ripple-75-32.bmp)|![](${host}/ripple-100-64.bmp)|
 
 I implemented a water ripple effect for my custom filter. The filter uses a
 camera centered directly above the image using orthographic projection of rays.
