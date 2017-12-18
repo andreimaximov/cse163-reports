@@ -1,7 +1,6 @@
-#! /bin/bash
+#!/bin/bash
 
-SCRIPTDIR=$(cd $(dirname ${0}) && pwd -P)
-
-source ${SCRIPTDIR}/env.sh
-
-${EXE} "${SCENES}/CornellBox-Glass.obj" ${SCENES} "${CONFIG}/cornell-box-glass.json"
+./scripts/run.sh \
+    ./scenes/CornellBox-Glass.obj \
+    ./scenes \
+    ./config/cornell-box-glass.json

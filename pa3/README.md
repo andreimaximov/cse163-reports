@@ -37,7 +37,7 @@ Binaries for macOS and Linux can be found in the [bin](bin) directory. The sourc
 
 I enjoyed learning about and implementing ray tracing in CSE 167 so for my final CSE 163 project I decided to write a path tracer with support for Monte Carlo global illumination, fresnel refractions, glossy surfaces, and caustics.
 
-To not worry about creating scenes, I used the [tinyobjloader](https://github.com/syoyo/tinyobjloader) library to load OBJ scenes and MTL materials available [here](http://graphics.cs.williams.edu/data/meshes.xml).
+To not worry about creating scenes, I used the [tinyobjloader](https://github.com/syoyo/tinyobjloader) library to load OBJ scenes and MTL materials available [here](http://g3d.cs.williams.edu/g3d/data10/).
 
 The `render.png` output file is updated once a second so you can observe the render clean up with more samples.
 
@@ -55,13 +55,13 @@ The following are several key features of my path tracer.
 
 - **Texture Mapping** - Diffuse textures will be loaded from the materials directory if specified in the associated MTL file. Texturing can be disabled via the `use_textures` option in the scene config. Note that having many transparent textures can decrease performance as the ray depth is not incremented when it passes through a transparent pixel in a texture which can lead to needing more logical bounces for each physical bounce.
 
-- **Bounding Volume Hierarchy** - Some scenes such as Rungholt from the [Williams graphics dataset ](http://graphics.cs.williams.edu/data/meshes.xml) have an extremely high vertex count (several million). I used a BVH to optimize ray intersection tests to ~O(log N). This was largely borrowed from my CSE 167 assignment but I made several optimizations to it such as handling the case of bad splits that can result from large overlap along the midpoint of the dimension with highest variance which is used as the main splitting heuristic.
+- **Bounding Volume Hierarchy** - Some scenes such as Rungholt from the [Williams graphics dataset ](http://g3d.cs.williams.edu/g3d/data10/) have an extremely high vertex count (several million). I used a BVH to optimize ray intersection tests to ~O(log N). This was largely borrowed from my CSE 167 assignment but I made several optimizations to it such as handling the case of bad splits that can result from large overlap along the midpoint of the dimension with highest variance which is used as the main splitting heuristic.
 
 - **Multi-Threaded** - Path tracing is [embarrassingly parallel](https://en.wikipedia.org/wiki/Embarrassingly_parallel) so of course multi-threading is supported. Different parts of the image however may have different loads due to varying geometry density. For example querying the BVH for the nearest intersection of a sky pixel in the Rungholt scene is many times faster than a pixel in the middle of the castle. To address this dynamic scheduling via a work queue is used to assign threads partitions to work on.
 
 ## Renders
 
-The following are several [Cornell Box](https://en.wikipedia.org/wiki/Cornell_box) renders using modified materials from the [Williams graphics dataset](http://graphics.cs.williams.edu/data/meshes.xml) to demonstrate several different material types. The configuration, geometry, and material files are available in the [config](config) and [scenes](scenes) directories. Several convenience scripts demonstrating the CLI usage are available in the [scripts](scripts) directory. The Dragon, Lost Empire, and Rungholt scenes are large files that are automatically downloaded to the `.cache` directory by the run script. If you encounter errors with the scripts you may need to clear the `.cache` directory after fixing your issue but before running the script again.
+The following are several [Cornell Box](https://en.wikipedia.org/wiki/Cornell_box) renders using modified materials from the [Williams graphics dataset](http://g3d.cs.williams.edu/g3d/data10/) to demonstrate several different material types. The configuration, geometry, and material files are available in the [config](config) and [scenes](scenes) directories. Several convenience scripts demonstrating the CLI usage are available in the [scripts](scripts) directory. The Dragon, Lost Empire, and Rungholt scenes are large files that are automatically downloaded to the `.cache` directory by the run script. If you encounter errors with the scripts you may need to clear the `.cache` directory after fixing your issue but before running the script again.
 
 
 | Original - 1500 Samples | Glossy - 300 Samples | Glass - 1000 Samples | Dragon - 32 Samples |
@@ -74,7 +74,7 @@ The following Cornell Boxes demonstrate the caustic effect with glass and water 
 |:----------------------:|:--------------------:|
 |![](images/cornell-spheres.png)|![](images/cornell-water.png)|
 
-Lastly are several more renderings of scenes showing simple environment lighting and texture mapping. These use unmodified original geometry and materials that can be downloaded from the [Williams graphics dataset ](http://graphics.cs.williams.edu/data/meshes.xml). Config files with camera positions and environment lighting presets are available in the [config](config) directory.
+Lastly are several more renderings of scenes showing simple environment lighting and texture mapping. These use unmodified original geometry and materials that can be downloaded from the [Williams graphics dataset ](http://g3d.cs.williams.edu/g3d/data10/). Config files with camera positions and environment lighting presets are available in the [config](config) directory.
 
 | Lost Empire - 32 Samples (With Textures) | Lost Empire - 250 Samples (No Textures) |
 |:----------------------------------------:|:---------------------------------------:|
