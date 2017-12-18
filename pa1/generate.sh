@@ -1,6 +1,5 @@
-#! /bin/bash
+#!/bin/bash
 
-BASE=$(dirname "$0")
-HOST="http://andreimaximov.com/files/projects/cse163-reports/pa1"
+HOST="images"
 
-sed -e 's|${host}|'${HOST}'|g' "${BASE}/src/README.md" > "${BASE}/README.md"
+sed -e 's|${host}|'${HOST}'|g' "./src/README.md" > "./README.md"

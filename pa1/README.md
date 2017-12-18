@@ -38,7 +38,7 @@ Binaries for macOS and Linux can be found in the [bin directory](bin).
 
 | Original | 0.0 | 0.5 | 1.0 | 1.5 | 2.0 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/flower.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/brightness_0.0.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/brightness_0.5.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/brightness_1.0.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/brightness_1.5.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/brightness_2.0.bmp)|
+|![](images/flower.bmp)|![](images/brightness_0.0.bmp)|![](images/brightness_0.5.bmp)|![](images/brightness_1.0.bmp)|![](images/brightness_1.5.bmp)|![](images/brightness_2.0.bmp)|
 
 ### Contrast
 
@@ -46,7 +46,7 @@ Binaries for macOS and Linux can be found in the [bin directory](bin).
 
 | Original | -0.5 | 0.0 | 0.5 | 1.0 | 1.7 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/flower.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/contrast_-0.5.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/contrast_0.0.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/contrast_0.5.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/contrast_1.0.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/contrast_1.7.bmp)|
+|![](images/flower.bmp)|![](images/contrast_-0.5.bmp)|![](images/contrast_0.0.bmp)|![](images/contrast_0.5.bmp)|![](images/contrast_1.0.bmp)|![](images/contrast_1.7.bmp)|
 
 ### Saturation
 
@@ -54,7 +54,7 @@ Binaries for macOS and Linux can be found in the [bin directory](bin).
 
 | Original | -1.0 | 0.0 | 0.5 | 1.0 | 2.5 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/flower.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/saturation_-1.0.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/saturation_0.0.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/saturation_0.5.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/saturation_1.0.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/saturation_2.5.bmp)|
+|![](images/flower.bmp)|![](images/saturation_-1.0.bmp)|![](images/saturation_0.0.bmp)|![](images/saturation_0.5.bmp)|![](images/saturation_1.0.bmp)|![](images/saturation_2.5.bmp)|
 
 ### Gamma
 
@@ -62,7 +62,7 @@ Binaries for macOS and Linux can be found in the [bin directory](bin).
 
 | Original | 0.0 | 0.5 | 1.0 | 1.5 | 2.0 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/flower.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/gamma_0.0.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/gamma_0.5.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/gamma_1.0.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/gamma_1.5.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/gamma_2.0.bmp)|
+|![](images/flower.bmp)|![](images/gamma_0.0.bmp)|![](images/gamma_0.5.bmp)|![](images/gamma_1.0.bmp)|![](images/gamma_1.5.bmp)|![](images/gamma_2.0.bmp)|
 
 ### Crop
 
@@ -70,7 +70,7 @@ Binaries for macOS and Linux can be found in the [bin directory](bin).
 
 | Original | (100, 100, 200, 200) |
 |:---:|:---:|
-|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/flower.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/crop.bmp)|
+|![](images/flower.bmp)|![](images/crop.bmp)|
 
 ## 3.3 Quantization and Dithering
 
@@ -80,7 +80,7 @@ Binaries for macOS and Linux can be found in the [bin directory](bin).
 
 | Original | 1 | 2 | 4 | 6 | 8 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/flower.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/quantize_1.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/quantize_2.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/quantize_4.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/quantize_6.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/quantize_8.bmp)|
+|![](images/flower.bmp)|![](images/quantize_1.bmp)|![](images/quantize_2.bmp)|![](images/quantize_4.bmp)|![](images/quantize_6.bmp)|![](images/quantize_8.bmp)|
 
 The standard quantization method described in the assignment was used for this
 filter. Since RGBA channels are floating point in the [0, 1] range extra care
@@ -93,7 +93,7 @@ binary)
 
 | Original | 1 | 2 | 4 | 6 | 8 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/flower.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/random_dither_1.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/random_dither_2.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/random_dither_4.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/random_dither_6.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/random_dither_8.bmp)|
+|![](images/flower.bmp)|![](images/random_dither_1.bmp)|![](images/random_dither_2.bmp)|![](images/random_dither_4.bmp)|![](images/random_dither_6.bmp)|![](images/random_dither_8.bmp)|
 
 Since we store RGBA channels are in the [0, 1] floating point range, we first
 convert the RGBA channel to the [0, 255] range (8-bit) and then apply random
@@ -107,7 +107,7 @@ reference binary)
 
 | Original | 1 | 2 | 4 | 6 | 8 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/flower.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/fsd_1.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/fsd_2.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/fsd_4.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/fsd_6.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/fsd_8.bmp)|
+|![](images/flower.bmp)|![](images/fsd_1.bmp)|![](images/fsd_2.bmp)|![](images/fsd_4.bmp)|![](images/fsd_6.bmp)|![](images/fsd_8.bmp)|
 
 The error propagation constants (alpha, beta, gamma, delta) are normalized to
 ensure that the multiplicative weight factor of the error propagating from each
@@ -122,7 +122,7 @@ similar to that of the source image.
 
 | Original | 3 | 5 | 7 | 11 | 13 | 17 |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/flower.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/blur_3.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/blur_5.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/blur_7.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/blur_11.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/blur_13.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/blur_19.bmp)|
+|![](images/flower.bmp)|![](images/blur_3.bmp)|![](images/blur_5.bmp)|![](images/blur_7.bmp)|![](images/blur_11.bmp)|![](images/blur_13.bmp)|![](images/blur_19.bmp)|
 
 **Note:** The Gaussian blur filter was normalized to add up to 1.0 for
 in-bounds pixels to ensure consistent brightness at the edges.
@@ -133,7 +133,7 @@ in-bounds pixels to ensure consistent brightness at the edges.
 
 | Original | 3 x 3 |
 |:---:|:---:|
-|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/flower.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/sharpen.bmp)|
+|![](images/flower.bmp)|![](images/sharpen.bmp)|
 
 The sharpen filter was normalized to add up to 1.0 for in-bounds pixels to
 ensure consistent brightness at the edges. You may not see a difference in
@@ -146,9 +146,9 @@ is recommended.
 
 | Original | 10 | 50 | 100 | 200 |
 |:---:|:---:|:---:|:---:|:---:|
-|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/flower.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/edge_detect_flower_10.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/edge_detect_flower_50.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/edge_detect_flower_100.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/edge_detect_flower_200.bmp)|
-|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/checkerboard.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/edge_detect_checker_10.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/edge_detect_checker_50.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/edge_detect_checker_100.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/edge_detect_checker_200.bmp)|
-|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/wave.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/edge_detect_wave_10.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/edge_detect_wave_50.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/edge_detect_wave_100.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/edge_detect_wave_200.bmp)|
+|![](images/flower.bmp)|![](images/edge_detect_flower_10.bmp)|![](images/edge_detect_flower_50.bmp)|![](images/edge_detect_flower_100.bmp)|![](images/edge_detect_flower_200.bmp)|
+|![](images/checkerboard.bmp)|![](images/edge_detect_checker_10.bmp)|![](images/edge_detect_checker_50.bmp)|![](images/edge_detect_checker_100.bmp)|![](images/edge_detect_checker_200.bmp)|
+|![](images/wave.bmp)|![](images/edge_detect_wave_10.bmp)|![](images/edge_detect_wave_50.bmp)|![](images/edge_detect_wave_100.bmp)|![](images/edge_detect_wave_200.bmp)|
 
 **Note:** Standard Sobel edge detector filters were convolved over the image
 but **not** normalized because the weighted sum of each filter is 0.
@@ -161,9 +161,9 @@ but **not** normalized because the weighted sum of each filter is 0.
 
 | Sampling | Original | 128 x 128 | 200 x 400 | 900 x 600 | 768 x 768 |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| Nearest Neighbor (sampling = 1) |![](http://andreimaximov.com/files/projects/cse163-reports/pa1/checkerboard.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/scale-128-128-nn.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/scale-200-400-nn.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/scale-900-600-nn.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/scale-768-768-nn.bmp)|
-| Hat (sampling = 2) |![](http://andreimaximov.com/files/projects/cse163-reports/pa1/checkerboard.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/scale-128-128-hat.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/scale-200-400-hat.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/scale-900-600-hat.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/scale-768-768-hat.bmp)|
-| Mitchell (sampling = 3) |![](http://andreimaximov.com/files/projects/cse163-reports/pa1/checkerboard.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/scale-128-128-mitchell.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/scale-200-400-mitchell.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/scale-900-600-mitchell.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/scale-768-768-mitchell.bmp)|
+| Nearest Neighbor (sampling = 1) |![](images/checkerboard.bmp)|![](images/scale-128-128-nn.bmp)|![](images/scale-200-400-nn.bmp)|![](images/scale-900-600-nn.bmp)|![](images/scale-768-768-nn.bmp)|
+| Hat (sampling = 2) |![](images/checkerboard.bmp)|![](images/scale-128-128-hat.bmp)|![](images/scale-200-400-hat.bmp)|![](images/scale-900-600-hat.bmp)|![](images/scale-768-768-hat.bmp)|
+| Mitchell (sampling = 3) |![](images/checkerboard.bmp)|![](images/scale-128-128-mitchell.bmp)|![](images/scale-200-400-mitchell.bmp)|![](images/scale-900-600-mitchell.bmp)|![](images/scale-768-768-mitchell.bmp)|
 
 Scale was applied in two separate steps - first to the x-axis and then the
 y-axis. By transposing the image between after both operations we were able
@@ -178,9 +178,9 @@ are much better at preserving overall appearance at the cost of bluriness.
 
 | Sampling | Original | (-40, -40) | (-20.3, -20.7) | (40, 40) | (20.3, 20.7) |
 |:---:|:---:|:---:|:---:|:---:|:---:|
-| Nearest Neighbor (sampling = 1) |![](http://andreimaximov.com/files/projects/cse163-reports/pa1/checkerboard.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/shift--40--40-nn.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/shift--20.3--20.7-nn.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/shift-40-40-nn.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/shift-20.3-20.7-nn.bmp)|
-| Hat (sampling = 2) |![](http://andreimaximov.com/files/projects/cse163-reports/pa1/checkerboard.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/shift--40--40-hat.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/shift--20.3--20.7-hat.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/shift-40-40-hat.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/shift-20.3-20.7-hat.bmp)|
-| Mitchell (sampling = 3) |![](http://andreimaximov.com/files/projects/cse163-reports/pa1/checkerboard.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/shift--40--40-mitchell.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/shift--20.3--20.7-mitchell.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/shift-40-40-mitchell.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/shift-20.3-20.7-mitchell.bmp)|
+| Nearest Neighbor (sampling = 1) |![](images/checkerboard.bmp)|![](images/shift--40--40-nn.bmp)|![](images/shift--20.3--20.7-nn.bmp)|![](images/shift-40-40-nn.bmp)|![](images/shift-20.3-20.7-nn.bmp)|
+| Hat (sampling = 2) |![](images/checkerboard.bmp)|![](images/shift--40--40-hat.bmp)|![](images/shift--20.3--20.7-hat.bmp)|![](images/shift-40-40-hat.bmp)|![](images/shift-20.3-20.7-hat.bmp)|
+| Mitchell (sampling = 3) |![](images/checkerboard.bmp)|![](images/shift--40--40-mitchell.bmp)|![](images/shift--20.3--20.7-mitchell.bmp)|![](images/shift-40-40-mitchell.bmp)|![](images/shift-20.3-20.7-mitchell.bmp)|
 
 Like scale, shift was applied in two separate steps - first to the x-axis and
 then the y-axis. By transposing the image between after both operations we
@@ -194,7 +194,7 @@ inconsistent sizing of squares in the grid.
 
 | Original | (25, 8) | (50, 16) | (75, 32) | (100, 64) |
 |:---:|:---:|:---:|:---:|:---:|
-|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/flower.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/ripple-25-8.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/ripple-50-16.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/ripple-75-32.bmp)|![](http://andreimaximov.com/files/projects/cse163-reports/pa1/ripple-100-64.bmp)|
+|![](images/flower.bmp)|![](images/ripple-25-8.bmp)|![](images/ripple-50-16.bmp)|![](images/ripple-75-32.bmp)|![](images/ripple-100-64.bmp)|
 
 I implemented a water ripple effect for my custom filter. The filter uses a
 camera centered directly above the image using orthographic projection of rays.
